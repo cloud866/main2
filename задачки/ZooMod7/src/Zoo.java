@@ -1,7 +1,10 @@
-mport java.util.Arrays;
+import java.util.Arrays;
 public class Zoo {
 
     // Override toString here...
+    public String toString(){
+        return "Zoo: " + Arrays.toString(objects);
+    }
 
     Object[] objects;
 
