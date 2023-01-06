@@ -1,4 +1,6 @@
-public class Animal {
+package ZooScreen;
+
+abstract public class Animal {
     public void print() {
         System.out.println(this);
     }

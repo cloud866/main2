@@ -1,9 +1,11 @@
+package ZooScreen;
+
 import java.util.Arrays;
 public class Zoo {
 
     // Override toString here...
     public String toString(){
-        return "Zoo: " + Arrays.toString(objects);
+        return "ZooScreen.Zoo: " + Arrays.toString(objects);
     }
 
     Object[] objects;
@@ -22,6 +24,12 @@ public class Zoo {
         }
     }
 
+    public void sound() {
+        for (Object a : objects) {
+            if (a instanceof Soundable);
+                ((Soundable)a).sound();
+        }
+    }
     public void change(Object a, int i) {
         if (i >= 0 && i < objects.length)
             objects[i] = a;
