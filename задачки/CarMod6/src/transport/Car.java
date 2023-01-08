@@ -1,6 +1,6 @@
 package transport;
 
-public class Car {
+public class Car extends Transport {
     public String brand;
     public int horsePower;
     public boolean isAwd;
@@ -11,6 +11,7 @@ public class Car {
         horsePower = 100;
         isAwd = false;
         acceleration = 10;
+        type = "Car";
     }
 
     public Car(String brand, int horsePower, boolean isAwd, float acceleration) {
@@ -18,6 +19,7 @@ public class Car {
         this.horsePower = horsePower;
         this.isAwd = isAwd;
         this.acceleration = acceleration;
+        type = "Car";
     }
 
     public void start() {
@@ -58,6 +60,12 @@ public class Car {
 
     public float countSpeed(float time) {
         return (100 / acceleration) * time;
+    }
+
+    @Override
+    public void ride() {
+        //super.ride();
+        System.out.println("Riding car");
     }
 
     public String toString() {
