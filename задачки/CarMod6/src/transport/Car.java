@@ -56,6 +56,10 @@ public class Car {
         this.acceleration = acceleration;
     }
 
+    public float countSpeed(float time) {
+        return (100 / acceleration) * time;
+    }
+
     public String toString() {
         return "brand = " + brand +"\n"
                 + "horsePower = " + horsePower +"\n"
