@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-       Matrix matrix = new Matrix(2, 3);
+       Matrix matrix = new Matrix(3, 2);
         //System.out.println(matrix.getH());
         //System.out.println(matrix.getW());
         //System.out.println(Arrays.deepToString(matrix.getMatrix()));
@@ -16,6 +16,10 @@ public class Main {
 
         matrix.sum(-4);
         matrix.pprint();
+
+        m.sum(matrix);
+
+        m.pprint();
 
 //        m.pprint();
 //        System.out.println(m.getH());  //2

@@ -24,6 +24,20 @@ public class Matrix {
         }
     }
 
+    public void sum(Matrix matrix) {
+        if ((this.h == matrix.getH()) && (this.w == matrix.getW())) {
+            for (int i = 0; i < h; i++) {
+                for (int j = 0; j < w; j++) {
+                    this.matrix[i][j] += matrix.getMatrix()[i][j];
+                }
+
+            }
+
+        } else {
+            System.out.println("Матрицы разных размерностей, я не хочу считать");
+        }
+    }
+
     public void pprint () {
         for (int i = 0; i < h; i++) {
             for (int j = 0; j < w; j++) {
