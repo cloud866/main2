@@ -1,7 +1,15 @@
 package transport;
 
 public class Transport implements Rideble, Swimmable {
-    public String type = "None";
+    protected String type = "None";
+
+    public Transport(String type) {
+        this.type = type;
+    }
+
+    public Transport() {
+
+    }
 
     @Override
     public void ride() {

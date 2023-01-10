@@ -1,17 +1,17 @@
 package transport;
 
-public class Car extends Transport {
-    public String brand;
-    public int horsePower;
-    public boolean isAwd;
-    float acceleration;
+public abstract class Car extends Transport {
+    protected String brand;
+    private int horsePower;
+    private boolean isAwd;
+    private float acceleration;
 
     public Car() {
-        brand = "Mazda";
+        this("Mazda");
         horsePower = 100;
         isAwd = false;
         acceleration = 10;
-        type = "Car";
+        //this.type = "Car";
     }
 
     public Car(String brand, int horsePower, boolean isAwd, float acceleration) {
@@ -19,12 +19,19 @@ public class Car extends Transport {
         this.horsePower = horsePower;
         this.isAwd = isAwd;
         this.acceleration = acceleration;
-        type = "Car";
+        this.type = "Car";
     }
 
-    public void start() {
-        System.out.printf(brand + "was started");
+    public Car(String brand) {
+        super("Car");
+        this.brand = brand;
     }
+
+    public abstract void start();
+
+    //public void start() {
+//        System.out.printf(brand + "was started");
+//    }
 
     public String getBrand() {
         return brand;
@@ -55,7 +62,11 @@ public class Car extends Transport {
     }
 
     public void setAcceleration(float acceleration) {
-        this.acceleration = acceleration;
+        if(acceleration <= 0) {
+            this.acceleration = 10;
+        } else {
+            this.acceleration = acceleration;
+        }
     }
 
     public float countSpeed(float time) {
@@ -67,7 +78,7 @@ public class Car extends Transport {
         //super.ride();
         System.out.println("Riding car");
     }
-
+    @Override
     public String toString() {
         return "brand = " + brand +"\n"
                 + "horsePower = " + horsePower +"\n"
