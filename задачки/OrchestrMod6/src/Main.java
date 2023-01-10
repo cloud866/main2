@@ -16,6 +16,11 @@ public class Main {
         orchestra.addMusician(new Bas());
         orchestra.addMusician(new Piano());
 
+        Sing sing = new Sing("Шофутинский");
+        orchestra.addMusician(sing);
+
+        sing.greet();
+
         orchestra.play();
     }
 }
