@@ -12,7 +12,7 @@ public class Auto {
         this.engine = new Engine();
         this.body = new Body(color);
         this.brand = brand;
-        this.wheel = wheel;
+        this.wheel = wheel;     //new Wheel(wheel);
         this.steeringWheel = new SteeringWheel(this.wheel);
 
     }
