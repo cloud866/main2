@@ -4,7 +4,7 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException {
         File file = new File("/home/denis/Документы/test");
-        boolean isDir = file.isDirectory();
-        System.out.println(isDir);
+        String[] files = file.list();
+        System.out.println(files.length);
     }
 }
