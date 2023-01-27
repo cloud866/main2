@@ -19,7 +19,7 @@ public class Rectangle extends Quadrangle implements Figure {
     }
 
     @Override
-    public double getHeigth() {
+    public double getHeight() {
         return Math.min(a, b);
     }
 

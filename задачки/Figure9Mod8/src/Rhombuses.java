@@ -9,7 +9,7 @@ public class Rhombuses extends Quadrangle implements Figure {
 
     @Override
     public double area() {
-        return b * getHeigth();    // area is a * h, we found h: a * alpha
+        return b * getHeight();    // area is a * h, we found h: a * alpha
     }
 
     public double perimeter() {
@@ -24,7 +24,7 @@ public class Rhombuses extends Quadrangle implements Figure {
     }
 
     @Override
-    public double getHeigth() {
+    public double getHeight() {
         return a * Math.sin(Math.toRadians(alpha));  // search heigth using sin
     }
 
